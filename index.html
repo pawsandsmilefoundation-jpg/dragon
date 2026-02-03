@@ -1,58 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#ff758c,#ff7eb3);
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.login-box{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  width:300px;
-  text-align:center;
-}
-input{
-  width:100%;
-  padding:10px;
-  margin:10px 0;
-}
-button{
-  width:100%;
-  padding:10px;
-  background:#ff4f81;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="login-box">
-  <h2>Login</h2>
-  <input type="text" id="user" placeholder="Username">
-  <input type="password" id="pass" placeholder="Password">
-  <button onclick="login()">Login</button>
+<div class="background">
+  <video autoplay muted loop class="video">
+    <source src="2.mp4" type="video/mp4">
+  </video>
+
+  <div class="login">
+    <div class="login-form">
+      <h1>LOGIN ❤️</h1>
+
+      <form onsubmit="login(event)">
+        <input type="text" id="user" placeholder="UserName"><br><br>
+        <input type="password" id="pass" placeholder="Password"><br><br><br>
+        <button>Login</button>
+      </form>
+
+    </div>
+  </div>
 </div>
 
 <script>
-function login(){
-  let u = document.getElementById("user").value;
-  let p = document.getElementById("pass").value;
-
-  if(u === "admin" && p === "1234"){
-    window.location.href = "love/index.html";
-  }else{
-    alert("Wrong username or password");
+function login(e){
+  e.preventDefault();
+  if(
+    document.getElementById("user").value === "dimple" &&
+    document.getElementById("pass").value === "love"
+  ){
+    window.location.href = "../love/index.html";
+  } else {
+    alert("Wrong Login ❌");
   }
 }
 </script>
