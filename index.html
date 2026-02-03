@@ -1,40 +1,646 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Dragon Cursor Effect</title>
-  </head>
-  <body>
-    <svg>
-      <defs>
-        <g id="Cabeza" transform="matrix(1, 0, 0, 1, 0, 0)">
-          <path style="fill:#FFFFFF;fill-opacity:1" d="M-28.9,-1.1L-28.55 -1.95Q-28.1 -3.1 -27.25 -2.95L-26.7 -2.95Q-27.7 -1.65 -28.9 -1.1M-18.35,-1.8Q-15.1 -10.3 -9.6 -6.05Q-15.1 -6.2 -18.35 -1.8M-18.35,1.1Q-15.1 5.45 -9.6 5.35Q-15.1 9.55 -18.35 1.1M-26.7,2.2L-27.25 2.25Q-28.1 2.4 -28.55 1.2L-28.9 0.35Q-27.7 0.9 -26.7 2.2" />
-          <path style="fill:#000000;fill-opacity:1" d="M-21.05,-8.25Q-13.6 -15.95 -1.3 -12.1Q-7.85 -8.5 -5.85 -4.35Q-2.3 -4.85 10.5 0.15Q0 4.35 -5.85 3.65Q-7.85 7.75 -1.25 12.45Q-13.6 15.2 -21.05 7.5Q-29.55 4.05 -30.2 -0.35Q-29.55 -4.8 -21.05 -8.25M-26.7,-2.95L-27.25 -2.95Q-28.1 -3.1 -28.55 -1.95L-28.9 -1.1Q-27.7 -1.65 -26.7 -2.95M-9.6,-6.05Q-15.1 -10.3 -18.35 -1.8Q-15.1 -6.2 -9.6 -6.05M-9.6,5.35Q-15.1 5.45 -18.35 1.1Q-15.1 9.55 -9.6 5.35M-28.9,0.35L-28.55 1.2Q-28.1 2.4 -27.25 2.25L-26.7 2.2Q-27.7 0.9 -28.9 0.35" />
-        </g>
-        <g id="Aletas" transform="matrix(1, 0, 0, 1, 0, 0)">
-          <linearGradient id="LinearGradID_1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0935974, 0, 0, 0.188782, -20.55, 0)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
-            <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
-            <stop offset="1" style="stop-color:#000000;stop-opacity:1" />
-          </linearGradient>
-          <path style="fill:url(#LinearGradID_1) " d="M29.75,-36.85Q-17.75 -61.45 -42.05 -40.95L-45.35 -38.35L-53.7 -41.15L-51.15 -44.85Q-34.85 -68.4 21 -57.8Q-32.2 -72.1 -50.25 -50Q-53.85 -45.65 -56.05 -41.95L-64.7 -43.35L-60.6 -50.3Q-45.9 -75.55 5.1 -79.35Q-2.2 -79.8 -9.45 -79.15Q-16.2 -78.55 -22.85 -77.15Q-29.85 -75.65 -36.5 -73Q-43.05 -70.4 -48.8 -66.85Q-54.55 -63.35 -56.8 -60.3L-60.5 -55.4Q-62.95 -52.1 -67 -43.55L-70.55 -43.55L-76.35 -42.95Q-74.6 -49.1 -71.85 -54.85Q-68.9 -61.25 -64.8 -67.1Q-60.8 -73 -55.45 -77.55Q-49.9 -82.35 -43.65 -85.85L-30.6 -92.7Q-24.05 -95.95 -17 -98.25Q-63.75 -86.35 -73.65 -57.1Q-75.75 -50.75 -77.45 -42.75Q-82.9 -41.75 -88 -39.65Q-87.65 -46.65 -86.3 -53.05Q-79.8 -89.8 -36.65 -117.2Q-80.65 -94.5 -87.55 -59.55Q-88.65 -54.15 -88.95 -39.4L-89.8 -38.85L-92.7 -37.6Q-93.75 -44.35 -94.1 -51.15Q-94.4 -58.2 -93.25 -65.1Q-92.15 -72.5 -90.05 -79.65Q-88.05 -86.55 -85 -93Q-82.1 -99.3 -78.45 -105.15Q-74.6 -111.35 -70.25 -117.25Q-65.95 -123.1 -61.1 -128.55Q-70.3 -119.35 -77.9 -108.7Q-86 -97.3 -90.8 -84.05Q-95.8 -70.5 -96 -56.15Q-96.1 -46 -94.05 -36.05L-93.25 -31.55Q-93.5 -35.65 -92.35 -36Q-79.85 -42 -66.6 -40.45Q-52.45 -38.85 -39.2 -33.25Q-28.3 -29.9 -21.25 -24.15Q-17.8 -23.3 -8.6 -15.6Q-12.1 -20.75 -16.75 -24.5Q-24.55 -30.7 -34.25 -34.05L-42.55 -37Q-38.9 -41.25 -31.5 -43.25Q-24.05 -45.3 -16.2 -46.3Q-8.35 -47.35 -1 -46Q5.95 -44.75 12.75 -42.85Q19.85 -40.9 29.75 -36.85M-92.45,-27.35L-94.95 -36.25Q-109.7 -105 -27.95 -154.65Q-98.65 -103.8 -91.75 -39.4L-89.95 -40.2Q-92.2 -105.25 -5.6 -130.9Q-78.8 -99.95 -87.45 -40.9Q-83.15 -42.95 -78.45 -43.95Q-70 -101.3 17.65 -103.8Q-56.9 -93.4 -74.5 -44.55L-67.4 -45.45Q-49.1 -94.95 39.25 -75.65Q-36.75 -84.35 -62.25 -44.25L-57.3 -43.6Q-31.65 -86.5 56.15 -46.05Q-20.3 -73.35 -51.35 -41.7L-45.95 -39.75Q-17.85 -71.35 51.85 -24.8Q-8.7 -56.4 -39.75 -37.05Q-28.15 -34.05 -14.25 -24.45Q-8.6 -19.85 -5.8 -16.95Q5.95 -2.4 20 0Q5.95 2.4 -5.8 16.95Q-8.6 19.85 -14.25 24.45Q-28.15 34.05 -39.75 37.05Q-8.7 56.4 51.85 24.8Q-17.85 71.35 -45.95 39.75L-51.35 41.7Q-20.3 73.35 56.15 46.1Q-31.65 86.5 -57.3 43.65L-62.25 44.3Q-36.75 84.35 39.25 75.7Q-49.1 94.95 -67.4 45.5L-74.5 44.6Q-56.9 93.4 17.65 103.85Q-70 101.3 -78.45 43.95Q-83.15 42.95 -87.45 40.9Q-78.8 99.95 -5.6 130.9Q-92.2 105.25 -89.95 40.25L-91.75 39.4Q-98.65 103.8 -27.95 154.65Q-109.7 105 -94.95 36.3L-92.45 27.35Q-93.05 33.9 -92.05 34.75Q-91.1 35.55 -88.95 36.7L-87.95 37Q-83.7 38.25 -79.05 38.8L-77.25 38.95Q-72.55 39.3 -67.5 38.85L-65.45 38.65Q-44.4 36.05 -17.8 19.6Q-9.9 12.8 -15.15 4.4Q-18.15 3.15 -19 0Q-18.15 -3.15 -15.15 -4.4Q-9.9 -12.8 -17.8 -19.6L-17.8 -19.55Q-44.4 -36.05 -65.45 -38.6L-67.5 -38.8Q-72.55 -39.3 -77.25 -38.95L-79.05 -38.75Q-83.7 -38.25 -87.95 -36.95L-88.95 -36.65Q-91.1 -35.55 -92.05 -34.7Q-93.05 -33.9 -92.45 -27.35M-8.6,15.6Q-17.8 23.3 -21.25 24.2Q-28.3 29.9 -39.2 33.3Q-52.45 38.85 -66.6 40.5Q-79.85 42 -92.35 36Q-93.5 35.65 -93.25 31.55L-94.05 36.1Q-96.1 46.05 -96 56.15Q-95.8 70.5 -90.8 84.1Q-86 97.3 -77.9 108.75Q-70.3 119.35 -61.1 128.6Q-65.95 123.1 -70.25 117.25Q-74.6 111.35 -78.45 105.15Q-82.1 99.3 -85 93Q-88.05 86.55 -90.05 79.7Q-92.15 72.5 -93.25 65.1Q-94.4 58.2 -94.1 51.2Q-93.75 44.35 -92.7 37.6L-89.8 38.9L-88.95 39.45Q-88.65 54.15 -87.55 59.55Q-80.65 94.5 -36.65 117.25Q-79.8 89.8 -86.3 53.1Q-87.65 46.65 -88 39.65Q-82.9 41.75 -77.45 42.75Q-75.75 50.75 -73.65 57.15Q-63.75 86.35 -17 98.3Q-24.05 95.95 -30.6 92.75L-43.65 85.9Q-49.9 82.35 -55.45 77.6Q-60.8 73 -64.8 67.15Q-68.9 61.25 -71.85 54.85Q-74.6 49.1 -76.35 42.95L-70.55 43.6L-67 43.6Q-62.95 52.1 -60.5 55.4L-56.8 60.35Q-54.55 63.35 -48.8 66.9Q-43.05 70.4 -36.5 73Q-29.85 75.65 -22.85 77.15Q-16.2 78.55 -9.45 79.15Q-2.2 79.8 5.1 79.35Q-45.9 75.55 -60.6 50.3L-64.7 43.4L-56.05 41.95Q-53.85 45.65 -50.25 50Q-32.2 72.1 21 57.85Q-34.85 68.4 -51.15 44.85L-53.7 41.2L-45.35 38.35L-42.05 40.95Q-17.75 61.45 29.75 36.85Q19.85 40.9 12.75 42.9Q5.95 44.75 -1 46Q-8.35 47.35 -16.2 46.35Q-24.05 45.3 -31.5 43.3Q-38.9 41.25 -42.55 37.05L-34.25 34.05Q-24.55 30.7 -16.75 24.5Q-12.1 20.75 -8.6 15.6" />
-        </g>
-        <g id="Espina" transform="matrix(1, 0, 0, 1, 0, 0)">
-          <linearGradient id="LinearGradID_2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0229492, 0, 0, -0.0152893, 0, 0.05)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
-            <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
-            <stop offset="1" style="stop-color:#333333;stop-opacity:1" />
-          </linearGradient>
-          <path style="fill:url(#LinearGradID_2) " d="M-18.8,0Q-17.85 -5.7 -12.3 -9.6Q-11.2 -5.35 -6.5 -8.25L-6.45 -8.2L-6.2 -8.3Q1.25 -16.25 6.65 -12.4Q0.05 -12.55 0 -5.95Q2.7 -2.4 7.75 -4.1Q18 -1.45 18.8 0L-18.8 0" />
-          <linearGradient id="LinearGradID_3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0229492, 0, 0, 0.0152893, 0, -0.05)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
-            <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
-            <stop offset="1" style="stop-color:#333333;stop-opacity:1" />
-          </linearGradient>
-          <path style="fill:url(#LinearGradID_3) " d="M18.8,0Q18 1.45 7.75 4.1Q2.7 2.4 0 5.95Q0.05 12.55 6.65 12.4Q1.25 16.25 -6.2 8.35Q-6.35 8.25 -6.45 8.25L-6.5 8.25Q-11.2 5.35 -12.3 9.6Q-17.85 5.7 -18.8 0L18.8 0" />
-        </g>
-      </defs>
-      <g id="screen" />
-    </svg>
-    <script src="script.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<title>Only For Dimple ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* 💥 CONFETTI */
+.confetti{
+  position:fixed;
+  top:-10vh;
+  font-size:5vw;
+  animation:fall 4s linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(120vh) rotate(360deg);}
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  color:white;
+  background:url('img1.jpeg') repeat;
+  background-size:cover;
+  animation:bgMove 80s linear infinite;
+  overflow-x:hidden;
+}
+@keyframes bgMove{
+  from{background-position:0 0;}
+  to{background-position:-3000px 0;}
+}
+
+.container{
+  padding:6vw;
+  text-align:center;
+}
+
+/* CARD */
+.card{
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(8px);
+  border-radius:6vw;
+  padding:6vw;
+  margin:10vw auto;
+  max-width:92%;
+  box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+/* GALLERY */
+.gallery{
+  position:relative;
+  width:100%;
+  height:60vw;
+  max-height:320px;
+  overflow:hidden;
+  border-radius:5vw;
+  margin-top:4vw;
+}
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  top:0; left:0;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out;
+}
+
+/* COUNTER */
+.counter{
+  margin-top:4vw;
+  font-size:4.5vw;
+}
+.counter span{
+  display:block;
+  font-size:6.5vw;
+  font-weight:bold;
+  color:#ffb3c1;
+}
+
+/* INPUT + BUTTON */
+input{
+  padding:3vw;
+  border-radius:10vw;
+  border:none;
+  width:65%;
+  text-align:center;
+  font-size:4vw;
+}
+button{
+  padding:3vw 6vw;
+  border:none;
+  border-radius:10vw;
+  font-size:4vw;
+  cursor:pointer;
+  background:white;
+  color:#ff4d6d;
+  margin-top:3vw;
+}
+
+/* MUSIC BUTTON */
+#musicBtn{
+  position:fixed;
+  top:4vw;
+  right:4vw;
+  padding:2.5vw 4vw;
+  border-radius:10vw;
+  border:none;
+  z-index:100;
+}
+
+/* PAW */
+.paw{
+  font-size:10vw;
+  cursor:pointer;
+}
+
+/* HIDDEN MESSAGE */
+#secret{
+  display:none;
+  animation:fadeIn 1s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.8);}
+  to{opacity:1; transform:scale(1);}
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:fixed;
+  bottom:-10vh;
+  font-size:6vw;
+  animation:floatUp linear infinite;
+  opacity:0.7;
+}
+@keyframes floatUp{
+  to{transform:translateY(-120vh);}
+}
+
+/* SHOOTING STARS */
+.star{
+  position:unfixed;
+  width:2px;
+  height:80px;
+  background:linear-gradient(white,transparent);
+  animation:shoot 2s linear infinite;
+  opacity:0.8;
+}
+@keyframes shoot{
+  from{transform:translate(0,0);}
+  to{transform:translate(-400px,400px); opacity:0;}
+}
+
+/* 🎂 BIRTHDAY POPUP */
+#birthdayPopup{
+  position:fixed;
+  bottom:4vw;
+  left:4vw;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(8px);
+  border-radius:4vw;
+  padding:3vw;
+  width:180px;
+  box-shadow:0 0 15px rgba(255,105,135,0.6);
+  z-index:200;
+  animation:popIn 1s ease;
+  text-align:center;
+}
+
+#birthdayPopup h3{
+  margin:0;
+  font-size:16px;
+  color:#ffb3c1;
+}
+#birthdayPopup p{
+  margin:2px 0 0;
+  font-size:14px;
+}
+#bdayTimer{
+  margin-top:4px;
+  font-size:14px;
+  font-weight:bold;
+  color:#fff;
+}
+
+/* 💖 LOVE DAY POPUP */
+#lovePopup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(12px);
+  border-radius:6vw;
+  padding:6vw;
+  width:85vw;
+  max-width:320px;
+  text-align:center;
+  z-index:999;
+  box-shadow:0 0 30px rgba(255,105,135,0.7);
+  animation:fadeIn 1s ease;
+}
+#lovePopup h2{
+  margin:0;
+  color:#ffb3c1;
+}
+#lovePopup button{
+  margin-top:4vw;
+}
+
+/* 🐼 PANDA */
+#panda{
+  position:fixed;
+  bottom:-200px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:40vw;
+  animation:pandaUp 3s ease forwards;
+  z-index:998;
+}
+@keyframes pandaUp{
+  to{bottom:-5vw;}
+}
+
+/* 📔 DIARY ICON */
+#diaryIcon{
+  position:fixed;
+  left:10px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:50px;
+  cursor:pointer;
+  z-index:999;
+}
+
+/* 📔 DIARY FULL PAGE */
+#diaryPage{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  transform-origin:left;
+  transform:rotateY(90deg);
+  transition:transform 0.8s ease;
+  z-index:9999;
+}
+
+#diaryPage.pageOpen{
+  transform:rotateY(0deg);
+}
+
+.diaryBox{
+  background:white;
+  color:black;
+  width:90%;
+  max-width:420px;
+  border-radius:20px;
+  padding:15px;
+}
+
+.diaryBox textarea{
+  width:100%;
+  height:120px;
+  padding:10px;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.diaryEntry{
+  background:#fff;
+  color:#000;
+  padding:4vw;
+  border-radius:3vw;
+  margin-bottom:4vw;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  animation:pageFlip .6s ease;
+  display:none;
+}
+.diaryEntry.active{
+  display:block;
+}
+@keyframes pageFlip{
+  from{transform:rotateY(-90deg);opacity:0;}
+  to{transform:rotateY(0);opacity:1;}
+}
+
+#oldEntries{
+  max-height:200px;
+  overflow-y:auto;
+}
+
+/* LIST BUTTON */
+#listBtn{
+  margin-top:5px;
+  padding:5px 10px;
+  background:#ffb3c1;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+#dateList div:hover{
+  background:#ffe4f0;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">Play / Pause</button>
+<div id="diaryIcon" onclick="openDiary()">📔</div>
+
+<div class="container">
+<h1>Hey ❤️</h1>
+<p>Ye website normal nahi… ye meri feelings hai 🌙</p>
+
+<p><b>Question:</b> Hum pehli baar kab mile the?</p>
+<input id="answer" type="password" placeholder="Enter password 💖">
+<button onclick="unlock()">Enter 💖</button>
+
+<div id="content" style="display:none">
+
+<!-- ANNIVERSARY -->
+<div class="card">
+<h2>Happy Anniversary bacha ❤️</h2>
+<div class="paw" onclick="openSecret()">🐾</div>
+<p>
+<b>1 December 2024</b> — jab sab kuch special bana ✨<br><br>
+<b>19 January 2025 · 1:30 AM</b> — jab main aur tum hum hogye 💫
+</p>
+</div>
+
+<!-- COUNTER -->
+<div class="card">
+<h2>⏳ Time Since We Fell in Love ⏳</h2>
+<div class="counter">
+<span id="days">0</span> Days
+<span id="hours">0</span> Hours
+<span id="minutes">0</span> Minutes
+<span id="seconds">0</span> Seconds
+</div>
+</div>
+
+<!-- MOMENTS -->
+<div class="card">
+<h2>📸 Our Moments 📸</h2>
+<div class="gallery">
+<img src="img1.jpeg">
+<img src="img2.jpeg">
+<img src="img3.jpeg">
+<img src="img4.jpeg">
+</div>
+</div>
+
+<!-- PROMISE -->
+<div class="card">
+<h2>💍 My Promise 💍</h2>
+<p>Main kabhi door nahi jaunga.<br>Har pal tumhare saath. Main promise karta hoon ki hamesha tumhare saath rahunga, tumhe har mushkil mein support dunga, tumhari har baat dhyan se sununga, aur tumhe poore dil se aur sachche pyar se chahunga. Jo bhi ho, main hamesha tumhare liye wahan rahunga, kyunki tum meri duniya ho ❤️</p>
+</div>
+
+<!-- FUTURE -->
+<div class="card">
+<h2>💌 Future Message 💌</h2>
+<p>
+Agar future me tum ye padh rahi ho,<br>
+toh yaad rakhna — main abhi bhi wahi hoon jb hum mile the aur mene pucha tha r u editor? me na badla hu aur na badlunga tumhare lliye mera pyaar humesa tumhara hai 💖
+</p>
+</div>
+
+<!-- HIDDEN -->
+<div class="card" id="secret">
+<h2>🐾 Hidden Message 🐾</h2>
+<p>Tum meri zindagi ka sabse khoobsurat hissa ho  jise me kabhi dur nhi jana jata ❤️</p>
+</div>
+
+<h2>Forever Yours,<br>Tanush ❤️</h2>
+</div>
+</div>
+
+<!-- 🎂 BIRTHDAY POPUP -->
+<div id="birthdayPopup">
+  <h3>🎂 Birthday Countdown</h3>
+  <p>5 May 💖</p>
+  <div id="bdayTimer">Loading...</div>
+</div>
+
+<!-- 💖 LOVE DAY POPUP -->
+<div id="lovePopup" style="display:none">
+  <h2 id="loveTitle"></h2>
+  <p id="loveMsg"></p>
+  <button onclick="closeLove()">Close ❤️</button>
+</div>
+
+<div id="panda" style="display:none">🐼</div>
+
+<!-- 📔 DIARY PAGE -->
+<div id="diaryPage">
+  <div class="diaryBox">
+    <h3>📔 Personal Diary</h3>
+    <p id="todayDate"></p>
+    <button id="listBtn">📖 List</button>
+    <div id="dateList" style="display:none; max-height:150px; overflow-y:auto; border:1px solid #ffb3c1; margin:5px 0; border-radius:10px; background:#fff0f8; padding:5px;"></div>
+    <textarea id="diaryText" placeholder="Aaj jo dil me hai likho..."></textarea>
+    <input type="file" id="diaryPhoto" accept="image/*">
+    <button onclick="saveDiary()">Save</button>
+    <button onclick="closeDiary()">Close</button>
+    <hr>
+    <div id="oldEntries"></div>
+  </div>
+</div>
+
+<script>
+let music=document.getElementById("bgm");
+function toggleMusic(){music.paused?music.play():music.pause();}
+
+// Unlock
+function unlock(){
+ let a=document.getElementById("answer").value.toLowerCase().trim();
+ if(a==="01/12/2024"||a==="1 december 24"){
+   document.getElementById("content").style.display="block";
+   music.play();
+   startSlideshow();
+   startCounter();
+   hearts();
+   stars();
+ }else alert("Sirf Dimple jaanti hai 😉");
+}
+
+// Slideshow
+let slide=0;
+function startSlideshow(){
+ let imgs=document.querySelectorAll(".gallery img");
+ imgs[0].style.opacity=1;
+ setInterval(()=>{ imgs.forEach(i=>i.style.opacity=0); slide=(slide+1)%imgs.length; imgs[slide].style.opacity=1; },3000);
+}
+
+// Hidden message
+function openSecret(){ document.getElementById("secret").style.display="block"; }
+
+// Counter
+function startCounter(){
+ const start=new Date("2025-01-19T01:30:00");
+ setInterval(()=>{
+  let diff=Math.floor((new Date()-start)/1000);
+  document.getElementById("days").innerText=Math.floor(diff/86400);
+  diff%=86400;
+  document.getElementById("hours").innerText=Math.floor(diff/3600);
+  diff%=3600;
+  document.getElementById("minutes").innerText=Math.floor(diff/60);
+  document.getElementById("seconds").innerText=diff%60;
+ },1000);
+}
+
+// Hearts
+function hearts(){
+ setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=4+Math.random()*4+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+ },400);
+}
+
+// Shooting stars
+function stars(){
+ setInterval(()=>{
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*50+"vh";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),2000);
+ },1500);
+} 
+
+/* 🎂 BIRTHDAY COUNTDOWN */
+function birthdayCountdown(){
+  const now = new Date();
+  let year = now.getFullYear();
+  let birthday = new Date(year + "-05-05T00:00:00");
+  if(now > birthday){ birthday = new Date((year + 1) + "-05-05T00:00:00"); }
+  setInterval(()=>{
+    let diff = Math.floor((birthday - new Date()) / 1000);
+    let days = Math.floor(diff / 86400); diff %= 86400;
+    let hours = Math.floor(diff / 3600); diff %= 3600;
+    let minutes = Math.floor(diff / 60);
+    let seconds = diff % 60;
+    document.getElementById("bdayTimer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  },1000);
+}
+birthdayCountdown();
+
+/* 💖 LOVE DAYS SYSTEM */
+const loveDays = {
+ "02-07": ["🌹 Rose Day", "Aaj Rose Day hai 🌹\nJaise rose special hota hai, waise hi tum ❤️"],
+ "02-08": ["💍 Propose Day", "Aaj Propose Day 💍\nMain roz tumhe choose karta hoon ❤️"],
+ "02-09": ["🍫 Chocolate Day", "Chocolate sweet hoti hai 🍫\nPar tum usse bhi zyada ❤️"],
+ "02-10": ["🧸 Teddy Day", "Aaj Teddy Day 🧸\nTum mera comfort ho ❤️"],
+ "02-11": ["🤞 Promise Day", "Aaj Promise Day 🤞\nMain kabhi tumhara saath nahi chhodunga ❤️"],
+ "02-12": ["🤗 Hug Day", "Ek tight hug tumhare liye 🤗❤️"],
+ "02-13": ["💋 Kiss Day", "Aaj Kiss Day 💋\nFeelings bina bole samajhne ka din ❤️"],
+ "02-14": ["❤️ Valentine’s Day", "Happy Valentine’s Day ❤️\nTum meri hamesha wali Valentine ho 💖"]
+};
+function checkLoveDay(){
+  const now = new Date();
+  const key = String(now.getMonth()+1).padStart(2,'0') + "-" + String(now.getDate()).padStart(2,'0');
+  if(loveDays[key]){
+    document.getElementById("loveTitle").innerText = loveDays[key][0];
+    document.getElementById("loveMsg").innerText = loveDays[key][1];
+    document.getElementById("lovePopup").style.display="block";
+  }
+}
+function closeLove(){ document.getElementById("lovePopup").style.display="none"; }
+checkLoveDay();
+
+/* 🎉 SPECIAL DAYS EFFECTS */
+function specialEffects(){
+ const d=new Date();
+ const m=d.getMonth()+1;
+ const day=d.getDate();
+ if(m===2 && day===10){ document.getElementById("panda").style.display="block"; }
+ if(m===2 && day===14){ confetti(); }
+ if(m===5 && day===5){ confetti(); }
+}
+function confetti(){
+ setInterval(()=>{
+  let c=document.createElement("div");
+  c.className="confetti";
+  c.innerHTML=["🎉","💖","✨","🎈","❤️"][Math.floor(Math.random()*5)];
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDuration=3+Math.random()*3+"s";
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),6000);
+ },300);
+}
+specialEffects();
+
+/* 📔 REAL DIARY SYSTEM */
+const diaryPageEl = document.getElementById("diaryPage");
+const oldEntriesEl = document.getElementById("oldEntries");
+const todayDateEl = document.getElementById("todayDate");
+const listBtnEl = document.getElementById("listBtn");
+const dateListEl = document.getElementById("dateList");
+let diaryEntriesArr = [];
+let currentIndex = 0;
+
+function openDiary(){
+  let author = prompt("Kaun diary likh raha hai? Tanush / Dimple 💖").trim();
+  if(author !== "Tanush" && author !== "Dimple"){ alert("Sirf Tanush ya Dimple hi likh sakte hain 💌"); return; }
+
+  let p = prompt("Diary password 💖");
+  if(p !== "dimple"){ alert("Wrong password ❌"); return; }
+
+  diaryPageEl.style.display = "flex";
+  setTimeout(()=> diaryPageEl.classList.add("pageOpen"), 50);
+
+  diaryEntriesArr = JSON.parse(localStorage.getItem("diary") || "[]");
+  currentIndex = 0;
+  loadDiary(author);
+}
+
+function saveDiary(){
+  let text = document.getElementById("diaryText").value.trim();
+  if(text === ""){ alert("Kuch toh likho ❤️"); return; }
+
+  let photoInput = document.getElementById("diaryPhoto");
+  let photo = "";
+  if(photoInput.files && photoInput.files[0]){
+    let reader = new FileReader();
+    reader.onload = function(e){ photo = e.target.result; pushDiaryEntry(text, photo); };
+    reader.readAsDataURL(photoInput.files[0]);
+  } else { pushDiaryEntry(text, photo); }
+}
+
+function pushDiaryEntry(text, photo){
+  let d = new Date().toDateString();
+  let author = prompt("Enter Author Again (Tanush/Dimple) 💖") || "Unknown";
+  let diary = JSON.parse(localStorage.getItem("diary") || "[]");
+  diary.unshift({date:d, author, text, photo});
+  localStorage.setItem("diary", JSON.stringify(diary));
+  document.getElementById("diaryText").value = "";
+  document.getElementById("diaryPhoto").value = "";
+  diaryEntriesArr = diary;
+  currentIndex = 0;
+  loadDiary(author);
+}
+
+function loadDiary(author){
+  todayDateEl.innerText = "📅 " + new Date().toDateString();
+  oldEntriesEl.innerHTML = "";
+  dateListEl.innerHTML = "";
+
+  diaryEntriesArr.forEach((entry,i)=>{
+    const div = document.createElement("div");
+    div.className = "diaryEntry";
+    if(i === currentIndex) div.classList.add("active");
+    div.innerHTML = `<b>${entry.date} - ${entry.author}</b><br><br>${entry.text}` + (entry.photo?`<br><img src="${entry.photo}" style="width:100%; margin-top:10px; border-radius:10px;">`:"");
+    oldEntriesEl.appendChild(div);
+
+    // populate list
+    const dBtn = document.createElement("div");
+    dBtn.style.padding="5px";
+    dBtn.style.cursor="pointer";
+    dBtn.style.borderBottom="1px solid #ffb3c1";
+    dBtn.innerText = entry.date + " - " + entry.author;
+    dBtn.onclick = ()=>{ currentIndex=i; updateActiveEntry(); dateListEl.style.display="none"; };
+    dateListEl.appendChild(dBtn);
+  });
+}
+
+function updateActiveEntry(){
+  const entries = document.querySelectorAll(".diaryEntry");
+  entries.forEach(e=>e.classList.remove("active"));
+  if(entries[currentIndex]) entries[currentIndex].classList.add("active");
+}
+
+listBtnEl.onclick = ()=>{ dateListEl.style.display = dateListEl.style.display==="none"?"block":"none"; }
+
+function closeDiary(){
+  diaryPageEl.classList.remove("pageOpen");
+  setTimeout(()=> diaryPageEl.style.display="none",700);
+}
+
+// Swipe support
+let startX = 0;
+oldEntriesEl.ontouchstart = (e)=>{ startX = e.touches[0].clientX; };
+oldEntriesEl.ontouchend = (e)=>{
+  let endX = e.changedTouches[0].clientX;
+  if(endX < startX - 50){ if(currentIndex<diaryEntriesArr.length-1){ currentIndex++; updateActiveEntry(); } }
+  else if(endX > startX + 50){ if(currentIndex>0){ currentIndex--; updateActiveEntry(); } }
+};
+</script>
+
+</body>
 </html>
