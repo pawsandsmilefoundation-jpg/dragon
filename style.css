@@ -1,128 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
-
 *{
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-  font-family: 'Nunito', sans-serif;
-}
-
-.video{
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100vh;
-	object-fit: cover;
-	padding: 0px;
-	margin: 0px;
-	opacity: 0.3;
-}
-
-
+/* FULL SCREEN BACKGROUND */
 .background{
-	background-image: url("./11.jpg");
-	width: 100%;
-	height: 100vh;
-	background-position: center left;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
 }
 
+/* VIDEO BACKGROUND */
+.video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:translate(-50%,-50%);
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.background::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+/* LOGIN CENTER */
 .login{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
+/* LOGIN CARD */
 .login-form{
-	width: 400px;
-	padding: 20px;
-	background: transparent;
-	text-align: center;
-	padding-left:60px;
-	padding-right: 60px;
-	margin-top: 50px;
-	border-radius: 10px;
-	z-index: 999;
-	opacity: 0.91;
-	box-shadow: 0px 0px 7px 0px #f1a6bc;
-	backdrop-filter: blur(10px);
-	border: 1px solid white;
+  width:100%;
+  max-width:360px;
+  background:rgba(0,0,0,0.65);
+  padding:25px;
+  border-radius:16px;
+  text-align:center;
+  color:#fff;
 }
 
-input{
-	outline: none;
-	border: none;
-	width: 100%;
-	font-size: 16px;
-	padding: 10px 10px;
-	background: none;
-	border: 2px solid white;
-	border-radius: 8px;
+/* HEADING */
+.login-form h1{
+  margin-bottom:20px;
+  letter-spacing:2px;
 }
 
-h1{
-	padding-bottom: 40px;
-	color: white;
+/* INPUTS */
+.login-form input{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  outline:none;
+  font-size:16px;
 }
 
-input::placeholder{
-	color: white;
-	font-size: 16px;
+/* BUTTON */
+.login-form button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#000;
+  font-size:16px;
+  cursor:pointer;
 }
 
-button{
-	background: none;
-	outline : none;
-	background: #da2859;
-	padding: 10px 40px;
-	font-size: 17px;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-bottom: 30px;
+/* LINK */
+.login-form p{
+  margin-top:15px;
+  font-size:14px;
+}
+.login-form a{
+  color:#ffd6e0;
+  text-decoration:none;
 }
 
-button:hover{
-	background: #f1a6bc;
+/* ERROR */
+.error{
+  margin-bottom:10px;
 }
 
-@media(max-width: 600px) {
-  
-.video{
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100vh;
-	object-fit: cover;
-	padding: 0px;
-	margin: 0px;
-	opacity: 0.3;
-}
-
-.background{
-	background-image: url("./11.jpg");
-	width: 100%;
-	height: 100vh;
-	background-position: center;
-	background-size: cover;
-}
-
-.login-form{
-	width: 90%;
-	padding: 10%;
-	background: white;
-	text-align: center;
-	padding-left:10%;
-	padding-right: 10%;
-	margin-top: 70px;
-	border-radius: 10px;
-}
-
+/* 📱 MOBILE EXTRA SMOOTH */
+@media(max-width:480px){
+  .login-form{
+    padding:20px;
+    border-radius:14px;
+  }
+  .login-form h1{
+    font-size:22px;
+  }
 }
