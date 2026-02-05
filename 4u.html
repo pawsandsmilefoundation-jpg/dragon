@@ -308,46 +308,7 @@ button{
 }
 /* 🔥 3D IMAGE GALLERY */
   
-📱 SWIPE GALLERY (3D REPLACEMENT) */
-.swipe-gallery{
-  position:relative;
-  width:100%;
-  height:60vw;
-  max-height:320px;
-  overflow:hidden;
-  border-radius:5vw;
-  margin-top:4vw;
-}
 
-/* 📱 ULTRA SMOOTH SWIPE GALLERY */
-.swipe-gallery{
-  position:relative;
-  width:100%;
-  height:60vw;
-  max-height:320px;
-  overflow:hidden;
-  border-radius:5vw;
-  touch-action: pan-y;
-}
-
-.swipe-gallery img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transform:translateX(100%);
-  transition:transform .35s ease;
-  will-change: transform;
-}
-
-.swipe-gallery img.active{
-  transform:translateX(0);
-}
-
-.swipe-gallery img.prev{
-  transform:translateX(-100%);
-}
   
 </style>
 </head/>
@@ -406,21 +367,6 @@ button{
 </div>
 <!-- 💫 3D MEMORY GALLERY -->
 <!-- 📱 SWIPE MEMORY GALLERY -->
-<div class="card">
-  <h2>💫 Memories 💫</h2>
-
-  <div class="swipe-gallery" id="swipeGallery">
-    <img src="1.jpg" class="active">
-    <img src="2.jpg">
-    <img src="3.jpg">
-    <img src="4.jpg">
-    <img src="5.jpg">
-    <img src="6.jpg">
-    <img src="7.jpg">
-    <img src="8.jpg">
-    <img src="9.jpg">
-    <img src="10.jpg">
-  </div>
 
   <p style="opacity:.7">👈 Ungli se swipe karo</p>
 </div>
@@ -707,58 +653,12 @@ oldEntriesEl.ontouchend = (e)=>{
   else if(endX > startX + 50){ if(currentIndex>0){ currentIndex--; updateActiveEntry(); } }
 };
 
-/* 📱 SWIPE GALLERY LOGIC */
-/* 📱 SMOOTH SWIPE GALLERY */
-let swipeIndex = 0;
-let startX = 0;
-let isSwiping = false;
-
-const swipeGallery = document.getElementById("swipeGallery");
-if(swipeGallery){
-  const imgs = swipeGallery.querySelectorAll("img");
-
-  function updateSwipe(){
-    imgs.forEach((img,i)=>{
-      img.classList.remove("active","prev");
-      if(i === swipeIndex) img.classList.add("active");
-      if(i === swipeIndex-1) img.classList.add("prev");
-    });
-  }
-  updateSwipe();
-
-  swipeGallery.addEventListener("touchstart",e=>{
-    startX = e.touches[0].clientX;
-    isSwiping = true;
-  },{passive:true});
-
-  swipeGallery.addEventListener("touchend",e=>{
-    if(!isSwiping) return;
-    let diff = e.changedTouches[0].clientX - startX;
-
-    if(diff < -40 && swipeIndex < imgs.length-1) swipeIndex++;
-    else if(diff > 40 && swipeIndex > 0) swipeIndex--;
-
-    updateSwipe();
-    isSwiping = false;
-  });
-    }
-
-  swipeGallery.addEventListener("touchstart",e=>{
-    swipeStartX = e.touches[0].clientX;
-  });
-
-  swipeGallery.addEventListener("touchend",e=>{
-    let endX = e.changedTouches[0].clientX;
-    if(endX < swipeStartX - 50 && swipeIndex < swipeImgs.length-1) swipeIndex++;
-    else if(endX > swipeStartX + 50 && swipeIndex > 0) swipeIndex--;
-    showSwipe(swipeIndex);
-  });
-  }
 </script>
 
 </body>
 
 </html>
+
 
 
 
