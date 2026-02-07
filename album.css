@@ -1,73 +1,112 @@
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-background:#151f28;
-overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:#0f172a;
+  overflow:hidden;
 }
+
+/* container */
 .wrapper{
-width:66rem;
-height:45rem;
-perspective:250rem;
+  width:95vw;
+  max-width:900px;
+  height:70vh;
+  max-height:550px;
+  perspective:2000px;
+  position:relative;
 }
+
+/* cover */
 .cover{
-position:absolute;
-width:50%;
-height:100%;
-background:#029bca;
-transform-origin:right;
+  position:absolute;
+  width:50%;
+  height:100%;
+  top:0;
+  background:#0ea5e9;
+  backface-visibility:hidden;
+  z-index:10;
 }
-.cover-right.turn{transform:rotateY(180deg)}
+
+.cover-left{
+  left:0;
+  border-radius:14px 0 0 14px;
+}
+
+.cover-right{
+  right:0;
+  transform-origin:left;
+  transition:transform 1s ease;
+}
+
+.cover-right.turn{
+  transform:rotateY(-180deg);
+}
+
+/* book */
 .book{
-width:100%;
-height:100%;
-position:relative;
+  width:100%;
+  height:100%;
+  position:relative;
 }
+
+/* pages */
 .book-page{
-width:50%;
-height:100%;
-position:absolute;
-background:#fff;
-padding:1rem;
+  position:absolute;
+  width:50%;
+  height:100%;
+  background:#fff;
+  overflow:hidden;
 }
-.page-left{box-shadow:-5px 5px 15px rgba(0,0,0,.2)}
+
 .page-right{
-right:0;
-transform-origin:left;
-transition:1s;
-transform-style:preserve-3d;
+  right:0;
+  transform-origin:left;
+  transform-style:preserve-3d;
+  transition:transform 1s ease;
 }
-.page-right.turn{transform:rotateY(-180deg)}
-.page-front,.page-back{
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
+
+.page-right.turn{
+  transform:rotateY(-180deg);
 }
-.page-back{transform:rotateY(180deg)}
-.img-box.full{
-width:100%;
-height:100%;
+
+.page-front,
+.page-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  backface-visibility:hidden;
 }
-.img-box.full img{
-width:100%;
-height:100%;
-object-fit:cover;
+
+.page-back{
+  transform:rotateY(180deg);
 }
-.nextprev-btn{
-position:absolute;
-bottom:1rem;
-right:1rem;
-font-size:2rem;
-cursor:pointer;
+
+/* images */
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
-.nextprev-btn.back{left:1rem}
-.number-page{
-position:absolute;
-bottom:1rem;
-left:50%;
-transform:translateX(-50%)
+
+/* arrows */
+.next,
+.prev{
+  position:absolute;
+  bottom:10px;
+  font-size:2rem;
+  cursor:pointer;
+  color:#000;
+  user-select:none;
 }
+
+.next{ right:10px; }
+.prev{ left:10px; }
