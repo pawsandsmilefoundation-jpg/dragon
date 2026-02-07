@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Voice Note</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/album.css">
+<title>Recorder Dial</title>
+<link rel="stylesheet" href="./album.css">
 </head>
 <body>
 
-<div class="voice-box">
-  <div class="dp" id="dp">
-    <img src="img1.jpeg">
+<div class="box">
+  <div class="dial" id="dial">
+    <img src="img1.jpeg" class="photo" id="photo">
+    <div class="needle"></div>
   </div>
-
-  <button id="playBtn">▶</button>
-
-  <audio id="audio">
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
 </div>
 
-<script src="./album.js"></script>
+<audio id="audio" src="song.mp3"></audio>
+
+<script src="script.js"></script>
 </body>
 </html>
