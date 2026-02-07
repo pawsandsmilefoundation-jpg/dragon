@@ -312,14 +312,15 @@ class FashionGallery {
     };
     animate();
   }
- this.fashionImages = [
+  initImageData() {
+    // Fashion portrait images
+    this.fashionImages = [
   "images/img1.jpeg",
   "images/img2.jpeg",
   "images/img3.jpeg",
   "images/img4.jpeg",
   "images/img5.jpeg"
 ];
-
     // Image data for titles and descriptions
     this.imageData = [
       {
